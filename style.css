@@ -1,0 +1,158 @@
+/**
+* You can edit this whole file.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --gray-0: #000000;
+  --gray-1: #222222;
+  --gray-2: #dddddd;
+  --gray-3: #fbfbfb;
+  --gray-4: #ffffff;
+  --primary: #8a2be2;
+  --secondary: #20d397;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1rem;
+  --font-weight-thin: 300;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 800;
+  --spacer-1: .25rem;
+  --spacer-2: .5rem;
+  --spacer-3: 1rem;
+  --spacer-4: 1.5rem;
+  --spacer-5: 2rem;
+  --shadows: 7px 7px 7px rgba(0, 0, 0, .15);
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+
+/* ADD CSS */
+
+
+body{
+  min-width: 480px;
+}
+::selection {
+  background: cyan;;
+}
+
+/* NAVIGATION */
+
+nav{
+  background:var(--secondary);
+  color:var(--gray-4);
+  font-weight:var(--font-weight-heavy);
+  text-align: -webkit-center;
+  font-size: var(--font-size-2);
+  padding: var(--spacer-1);
+
+}
+
+nav .nav-container{
+  justify-content: space-between;  
+  max-width: 1200px;
+  margin-left: var(--spacer-2);
+  margin-right: var(--spacer-2);
+}
+
+nav .nav-container div img{
+  margin: var(--spacer-1);
+  margin-right: var(--spacer-3);
+  height: 2.2rem;
+}
+
+nav .nav-container,nav .nav-container div, nav .nav-container ul{
+  display: flex;
+  align-items: center;
+}
+nav ul{
+  list-style-type: none;
+}
+.nav-container ul li a {
+  color:var(--gray-4);
+  text-align: center;
+  text-decoration: none;
+  margin-left: var(--spacer-5);
+}
+
+.nav-container ul .active a{
+  border-bottom: 3px solid white;
+}
+
+/* CONTAINER */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacer-4);
+}
+.content{
+  max-width: 1200px;
+}
+.container h1{
+  font-size: var(--font-size-1);
+  font-weight:var(--font-weight-bold);
+}
+
+.list-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:2rem;
+  margin-top: var(--spacer-4);
+}
+
+.list-cards .card{
+  border:#e7e7e7 1px solid  ;
+  padding:var(--spacer-3);
+  display: flex;
+  flex-direction: column;    
+  justify-content: space-between;
+  box-shadow: var(--shadows);
+}
+
+.list-cards .card h2{
+  font-weight:var(--font-weight-bold);
+  margin-bottom: var(--spacer-4);
+}
+.list-cards .card p{
+  margin-top: var(--spacer-4);
+  font-size:  var(--font-size-2);
+}
+.list-cards .card a{
+  background:var(--primary);
+  margin-top: var(--spacer-4);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-decoration: none;
+  color:var(--gray-4);
+  font-size:  var(--font-size-3);
+  font-weight:var(--font-weight-bold);
+}
+
+.list-cards .card a img{
+  height: 1.2rem;
+  margin:0.75rem;
+}
+
+/* There is a single breakpoint to change from 1 to 3 columns when the viewport is 768px or wider */
+@media (max-width: 780px) {
+  .list-cards {
+    grid-template-columns: 1fr;
+  }
+  html {
+    font-size: 1  px;
+  }
+}
